@@ -27,6 +27,15 @@ INSERT INTO books (title, author, genre, price, publication_year, stock_quantity
 
 
 
+SELECT title,price FROM books
+ORDER BY price ASC;
+
+
+SELECT * FROM books
+WHERE title ilike 'THE%'
+
+SELECT * FROM books
+WHERE genre ='Fantasy'
 
 
 
