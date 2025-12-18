@@ -32,3 +32,14 @@ INSERT INTO orders (order_id, customer_id, book_id, order_date, quantity, total_
 (17, 2, 6, '2023-06-07', 1, 19.99),
 (18, 7, 3, '2023-06-08', 2, 27.98);
 
+SELECT COUNT(*) FROM orders
+
+
+SELECT
+    SUM(total_amount) AS total_revenue,
+    AVG(total_amount) AS avg_order_amount,
+    MAX(total_amount) AS max_order_amount,
+    MIN(total_amount) AS min_order_amount
+FROM orders
+WHERE order_date >= '2023-06-01'
+  AND order_date <= '2023-06-30';
