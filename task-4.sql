@@ -22,7 +22,21 @@ INSERT INTO customers (first_name, last_name, email, city, country, registration
 ('Lucas', 'Rodriguez', 'lucas.r@email.com', 'Buenos Aires', 'Argentina', '2023-03-30');
 
 
+SELECT  country FROM customers
 
+
+ALTER TABLE customers
+RENAME  COLUMN first_name TO customer_first_name
+
+
+SELECT * FROM customers
+WHERE email ilike '%.com' AND country IN ('USA','UK')
+
+SELECT * FROM customers
+WHERE country='USA' OR country='UK'
+
+SELECT UPPER(customer_first_name || ' ' || last_name) FROM customers;
+SELECT LOWER(email || ' ' || city) FROM customers;
 
 
 
