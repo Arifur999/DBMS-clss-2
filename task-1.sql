@@ -1,4 +1,17 @@
-----------task - 1 --------------
+-- TABLE 1: customers
+-- This table should store customer information with the following columns:
+
+-- customer_id: Integer, primary key
+-- first_name: Text field (max 50 characters)
+-- last_name: Text field (max 50 characters)
+-- email: Text field (max 100 characters)
+-- city: Text field (max 50 characters)
+-- country: Text field (max 50 characters)
+-- registration_date: Date field
+
+
+
+----------task - 1 ANS--------------
 
 -------create table------------
 

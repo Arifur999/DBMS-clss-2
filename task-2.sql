@@ -1,4 +1,18 @@
-------------TASK-2----------------
+-- TABLE 2: books
+-- This table should store book catalog information with the following columns:
+
+-- book_id: Integer, primary key
+-- title: Text field (max 200 characters)
+-- author: Text field (max 100 characters)
+-- genre: Text field (max 50 characters)
+-- price: Decimal number (10 digits total, 2 after decimal point)
+-- publication_year: Integer
+-- stock_quantity: Integer
+
+
+
+
+------------TASK-2----ANS------------
 
 ---------------CREATE BOOKS TABLE---------------------
 
