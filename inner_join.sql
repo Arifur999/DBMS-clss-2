@@ -28,7 +28,7 @@ INSERT INTO post (title,user_id) values
 
 ---------------join--------------
 
-  --------------inner join--------------
+  --------------inner join------------(null kno kisu rakhe na...soriye dey )--
 
 SELECT title ,username FROM post
 JOIN users ON post.user_id =users.id
@@ -43,3 +43,30 @@ JOIN users ON post.user_id =users.id
 SELECT p.id,title ,username FROM post AS p
 JOIN users AS u ON p.user_id =u.id
 
+
+
+
+-----------------left join------------------
+
+---------------left join kono (primary table ) er man jodi na thake sei jaygay null diye fil kore dey data delete kore na---------------
+
+
+SELECT p.id,title ,username FROM post AS p
+LEFT JOIN users AS u ON p.user_id =u.id
+
+
+-----------------RIGHT join------------------
+
+-----RIGHT join kono (SECOND table ) er man jodi na thake sei jaygay null diye fil kore dey data delete kore na----------
+
+SELECT p.id,title ,username FROM post AS p
+RIGHT JOIN users AS u ON p.user_id =u.id
+
+
+-----------------FULL join------------------
+
+-----FULL join kono man jodi na thake SEI SOV JAYGAY NULL diye fil kore dey data delete kore na----------
+
+
+SELECT p.id,title ,username FROM post AS p
+FULL JOIN users AS u ON p.user_id =u.id
