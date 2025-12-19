@@ -41,7 +41,7 @@ JOIN users ON post.user_id =users.id
 --------rename----------
 
 SELECT p.id,title ,username FROM post AS p
-JOIN users AS u ON p.user_id =u.id
+INNER JOIN users AS u ON p.user_id =u.id        --SUDU JOIN DILE O HOY
 
 
 
