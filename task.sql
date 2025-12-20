@@ -88,3 +88,14 @@ FROM
   INNER JOIN departments USING (department_id)
 GROUP BY
   department_name ORDER BY avg_salary DESC LIMIT 1
+
+
+  -- 5. count employees hired each year
+
+  
+---------EYAR TYPE CHANGE--(DATE TO YEAR)---------
+SELECT EXTRACT (YEAR FROM '2022-01-1'::DATE)
+----------------------------------
+
+SELECT EXTRACT (YEAR FROM hire_date) AS hire_year,count(*) FROM employees
+GROUP BY hire_year ;
