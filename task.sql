@@ -43,7 +43,7 @@ INSERT INTO employees ( employee_name, department_id, salary, hire_date) VALUES
 ('Imran Chowdhury', 2, 62000.00, '2019-08-08');
 
 
---- INNER JOIN to retrieve employee and department information
+---1 INNER JOIN to retrieve employee and department information
 
 SELECT
   *
@@ -55,3 +55,24 @@ FROM
 
 SELECT * FROM employees INNER JOIN departments USING (department_id)
 
+  -- TASK 2. show Department name average salary
+
+  
+SELECT
+  department_name,ROUND(AVG(salary))  --1100.8456 => . ER PORER SONGKHA SORAI DEY
+FROM
+  employees
+  INNER JOIN departments USING (department_id)
+GROUP BY
+  department_name
+
+-- 3.COUNT EMPLOYEES IN EACH DEPARTMENT
+
+
+SELECT
+  department_name,COUNT(employees)  --1100.8456 => . ER PORER SONGKHA SORAI DEY
+FROM
+  employees
+  INNER JOIN departments USING (department_id)
+GROUP BY
+  department_name
