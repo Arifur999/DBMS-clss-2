@@ -1,3 +1,4 @@
+
 CREATE TABLE departments(
   department_id SERIAL PRIMARY KEY,
   department_name VARCHAR(50)
@@ -6,7 +7,7 @@ CREATE TABLE departments(
 
 
 CREATE TABLE employees(
-  employee_id INT,
+  employee_id SERIAL PRIMARY KEY ,
   employee_name VARCHAR(50),
   department_id INT REFERENCES departmentS (department_id),
   salary DECIMAL(10,2),
@@ -40,3 +41,17 @@ INSERT INTO employees ( employee_name, department_id, salary, hire_date) VALUES
 ('Shakib Hossain', 4, 75000.00, '2018-04-22'),
 ('Anika Sultana', 1, 46000.00, '2023-02-14'),
 ('Imran Chowdhury', 2, 62000.00, '2019-08-08');
+
+
+--- INNER JOIN to retrieve employee and department information
+
+SELECT
+  *
+FROM
+  employees AS e
+  INNER JOIN departments AS d ON e.department_id = d.department_id
+
+--------short kore lekha jay-----------
+
+SELECT * FROM employees INNER JOIN departments USING (department_id)
+
