@@ -76,3 +76,15 @@ FROM
   INNER JOIN departments USING (department_id)
 GROUP BY
   department_name
+
+
+-- 4. find the department name with the highest avarage salary
+
+
+SELECT
+  department_name,ROUND(AVG(salary)) AS avg_salary
+FROM
+  employees
+  INNER JOIN departments USING (department_id)
+GROUP BY
+  department_name ORDER BY avg_salary DESC LIMIT 1
