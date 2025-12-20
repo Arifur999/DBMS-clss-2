@@ -29,3 +29,14 @@ INSERT INTO departments (department_name)
   ('Research'),
   ('Gm');
 
+INSERT INTO employees ( employee_name, department_id, salary, hire_date) VALUES
+('Rahim Uddin', 1, 45000.00, '2022-01-15'),
+('Karim Ahmed', 2, 55000.00, '2021-03-10'),
+('Sadia Khan', 3, 60000.00, '2020-07-25'),
+('Nusrat Jahan', 1, 48000.00, '2022-11-05'),
+('Tanvir Hasan', 4, 70000.00, '2019-06-18'),
+('Farhan Islam', 2, 52000.00, '2021-09-30'),
+('Mithila Roy', 3, 58000.00, '2020-12-12'),
+('Shakib Hossain', 4, 75000.00, '2018-04-22'),
+('Anika Sultana', 1, 46000.00, '2023-02-14'),
+('Imran Chowdhury', 2, 62000.00, '2019-08-08');
