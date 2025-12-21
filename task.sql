@@ -99,3 +99,32 @@ SELECT EXTRACT (YEAR FROM '2022-01-1'::DATE)
 
 SELECT EXTRACT (YEAR FROM hire_date) AS hire_year,count(*) FROM employees
 GROUP BY hire_year ;
+
+
+
+
+
+-----------------sub query---------------------
+
+
+-------------FIND WHICH EMPLOYEE GETS THE HIGHEST SALARY-----------------
+
+SELECT * FROM employees 
+WHERE salary =(SELECT MAX(salary) FROM employees)
+
+
+
+------------------FIND EMPLOYEE WHO EARN MORE THEN THE AVERAGE SALARY---------------------------
+
+SELECT * FROM employees
+WHERE salary >(SELECT AVG(salary) FROM employees)
+
+
+------------NAME OF THE EMPLOYEE WHO GETS THE HIGHEST SALARY IN HR DEPARTMENT---------------
+
+SELECT * FROM employees
+WHERE salary =(
+  SELECT MAX(salary) FROM employees 
+  WHERE departments ='HR'
+)
+
